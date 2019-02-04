@@ -1,0 +1,102 @@
+
+
+
+
+  <ion-content  class="background">
+  
+
+  <img src="../assets/imgs/bas1.png"/>
+<ion-card>
+
+<ion-card-header>
+  SIGNUP
+</ion-card-header>
+    <ion-card-content>
+
+      <ion-list no-line>
+         <form [formGroup]="myForm" novalidate >
+        <ion-item>
+          
+          <ion-input input type="text" placeholder="Name" formControlName="name"></ion-input>
+        </ion-item>
+<ion-item no-lines *ngIf="( myForm.get('name').hasError('minlength') || myForm.get('name').hasError('required') ) && myForm.get('name').touched">
+
+<div class="error" *ngIf="myForm.get('name').hasError('required') && myForm.get('name').touched">
+Name is required
+</div>
+<div class="error" *ngIf="myForm.get('name').hasError('minlength') && myForm.get('name').touched">
+Maximum of 6 characters
+</div>
+</ion-item>
+
+        <ion-item>
+          
+          <ion-input input type="text" placeholder="Username" formControlName="username"></ion-input>
+        </ion-item>
+        <ion-item no-lines *ngIf="( myForm.get('username').hasError('minlength') || myForm.get('username').hasError('required') ) && myForm.get('username').touched">
+
+<div class="error" *ngIf="myForm.get('username').hasError('required') && myForm.get('username').touched">
+username is required
+</div>
+<div class="error" *ngIf="myForm.get('username').hasError('minlength') && myForm.get('username').touched">
+Minimum of 6 characters
+</div>
+</ion-item>
+          
+          <ion-item>
+
+            <ion-input type="email" placeholder="E-mail" formControlName="email"></ion-input>
+          </ion-item>
+
+           <ion-item no-lines *ngIf="( myForm.get('email').hasError('email') || myForm.get('email').hasError('required') ) && myForm.get('email').touched">
+
+<div class="error" *ngIf="myForm.get('email').hasError('required') && myForm.get('username').touched">
+email is required
+</div>
+<div class="error" *ngIf="myForm.get('email').hasError('email') && myForm.get('email').touched">
+Enter valid email
+</div>
+</ion-item>
+<ion-item>
+
+            <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+          </ion-item>
+ <ion-item no-lines *ngIf="( myForm.get('password').hasError('required') ) && myForm.get('password').touched">
+
+<div class="error" *ngIf="myForm.get('password').hasError('required') && myForm.get('password').touched">
+password is required
+</div>
+
+</ion-item>
+
+          <ion-item>
+
+            <ion-input type="password" placeholder="confirmPassword" formControlName="confirmpassword"></ion-input>
+          </ion-item>
+          <ion-item no-lines *ngIf="( myForm.get('confirmpassword').hasError('required') ) && myForm.get('confirmpassword').touched">
+
+<div class="error" *ngIf="myForm.get('confirmpassword').hasError('required') && myForm.get('confirmpassword').touched">
+password should match
+</div>
+
+</ion-item>
+
+
+</form>
+        
+        
+        <button ion-button block class="google" (click)="onSubmit(myForm)">SIGN-UP</button>
+</ion-list>
+    </ion-card-content>
+
+</ion-card>
+
+</ion-content>
+
+<style type="text/css">
+.error
+{
+color:red;
+}
+
+</style>

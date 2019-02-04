@@ -1,0 +1,74 @@
+page-signup {
+		.background{
+		
+			background: linear-gradient(160deg,#ff4d4d 60%,#ff3385 30%);
+			
+		}
+		ion-content.content{
+			margin-top: -10px;
+
+		}
+
+
+
+	ion-card.card {
+		margin-top: -40px;
+		box-shadow: none;
+		background: rgba(0, 0, 0, 0.5);
+		border-radius: 5px;
+	}
+
+	a, p,
+	ion-card-header.card-header {
+		color: #fff!important;
+
+	}
+
+	.list > .item-block:first-child {
+		border: medium none;
+	}
+
+
+
+	.google
+	{
+		background : rgb(214,45,32);
+	}
+	.item {
+		margin-bottom: 10px;
+		background: rgba(255, 255, 255, 0.5);
+		border: medium none;
+
+		.text-input, {
+			color: #ffb3b3;
+		}
+
+		input::-moz-placeholder  {
+			color: #fff!important;
+		}
+
+		input:-moz-placeholder {
+			color: #fff!important;
+		}
+
+		*::-webkit-input-placeholder  {
+			color: #fff!important;
+		}
+
+		*:-ms-input-placeholder  {
+			color: #fff!important;
+		}
+
+		*:-moz-placeholder  {
+			color: #fff!important;
+		}
+	}
+
+	
+
+	.bottom {
+		position: absolute;
+		bottom: 0;
+	}
+
+}

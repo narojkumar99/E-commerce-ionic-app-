@@ -1,0 +1,41 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content  class="background">
+  <ion-card style="margin: 0px; border: none; width: 100%;">
+    <img src="./assets/imgs/bas1.png" style="width: 70%; margin: auto; padding: 20px;">
+  </ion-card>
+<ion-card >
+
+<ion-card-header>
+  User-Login
+</ion-card-header>
+    <ion-card-content>
+      <ion-list no-line>
+        <ion-item>
+
+          <ion-input input type="text" placeholder="Username" [(ngModel)]="username"></ion-input>
+        </ion-item>
+          <ion-item>
+
+            <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+          </ion-item>
+
+
+
+        
+        <a> Forget your login detail!<a>Get help signing in</a></a>
+        <button ion-button block outline color="light" (click)="loginuser(username,password)">LOGIN</button>
+        
+</ion-list>
+    </ion-card-content>
+
+</ion-card>
+
+</ion-content>
